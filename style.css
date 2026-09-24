@@ -272,6 +272,8 @@ card {
   margin-top: 50px;
   margin-bottom: 50px;
   height: 845px;
+  /* margin-right: 200px; */
+  margin-left: 50px;
 }
 
 /* Bagian Kiri (Foto) */
@@ -297,10 +299,12 @@ card {
 
 /* Bagian Kanan (Teks) */
 .kanan {
-  flex: 1.2;
+  /* flex: 1.5; */
   /* height: 840px; */
+  margin-right: 200px;
 }
 .kanan {
+  margin-left: 20px;
 }
 
 .kanan p:first-child {
@@ -310,6 +314,7 @@ card {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 6px;
+  /* margin-right: 100px; */
 }
 
 .kanan h2 {
@@ -336,7 +341,7 @@ card {
 }
 
 /* Responsif untuk Layar HP / Tablet */
-@media (max-width: 868px) {
+/* @media (max-width: 868px) {
   .box {
     flex-direction: column;
     gap: 30px;
@@ -352,7 +357,7 @@ card {
     height: auto;
     max-height: 400px;
   }
-}
+} */
 
 .container .content1 {
   display: flex;
@@ -970,90 +975,6 @@ hr {
   border: 1px solid #334155;
 }
 
-/* Responsive Design */
-/* @media (max-width: 900px) {
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .footer-bottom-container {
-    flex-direction: column;
-    text-align: center;
-  }
-} */
-/* responsive hp */
-/* @media (max-width: 768px) {
-  container {
-    max-width: 90%;
-  }
-  .section {
-    padding: 70px 0px;
-  } */
-/* ini kode navbar */
-/* .header {
-    height: auto;
-    padding: 20px 0px;
-  }
-  .container-header {
-    flex-direction: column;
-  }
-} */
-
-@media screen and (max-width: 430px) {
-  .skills-section {
-    padding: 42px 22px; /* Margin samping yang pas untuk lebar 423px */
-  }
-
-  .section-subtitle {
-    font-size: 14px;
-    letter-spacing: 0.4px;
-  }
-
-  .section-title {
-    font-size: 25px;
-    margin-bottom: 32px;
-  }
-
-  .skills-container {
-    grid-template-columns: 1fr; /* 1 Kolom memanjang */
-    gap: 20px; /* Jarak pas antar kartu untuk rasio tinggi 19.5:9 */
-  }
-
-  .skill-card {
-    padding: 32px 22px;
-    border-radius: 16px;
-  }
-
-  .icon-box {
-    width: 58px;
-    height: 58px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-  }
-
-  .icon-box img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .skill-title {
-    font-size: 18.5px;
-    margin-bottom: 12px;
-  }
-
-  .skill-desc {
-    font-size: 13.5px;
-    line-height: 1.55;
-  }
-}
-
 .footer {
   background-color: #080910;
   border-top: 1px solid var(--border-color);
@@ -1350,30 +1271,167 @@ fotter99 {
   transform: translateY(-3px);
 }
 
-/* ================= MEDIA QUERIES (Aturan Khusus HP) ================= */
-@media (max-width: 640px) {
-  .footer {
-    padding-top: 2.5rem;
+@media screen and (max-width: 768px) {
+  /* 1. Global / General Reset */
+  body {
+    overflow-x: hidden;
   }
 
-  /* Mengurangi gap antar kolom di HP agar lebih hemat tempat */
+  /* 2. Navigation / Header */
+  nav {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .nav-link {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+  }
+
+  .contactme {
+    display: none; /* Disembunyikan agar navbar tidak terlalu penuh di HP */
+  }
+
+  /* 3. Hero Section */
+  .hero-container {
+    flex-direction: column-reverse; /* Foto di atas, teks di bawah */
+    padding: 20px;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .content-left {
+    width: 100%;
+  }
+
+  .content-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hexagon-box {
+    width: 220px;
+    height: 220px;
+  }
+
+  .name {
+    font-size: 28px;
+  }
+
+  .headline {
+    font-size: 20px;
+  }
+
+  /* 4. Skills Section */
+  .skills-section {
+    padding: 30px 20px;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .skill-card {
+    width: 100%;
+  }
+
+  /* 5. About Section */
+  .box#about {
+    flex-direction: column;
+    padding: 20px;
+    gap: 25px;
+    text-align: left;
+  }
+
+  .kiri,
+  .kanan {
+    width: 100%;
+  }
+
+  .kiri img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* 6. Portfolio Section */
+  .container#portfolio {
+    padding: 20px;
+  }
+
+  .content1 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    width: 100%;
+  }
+
+  .card1 img,
+  .card2 img,
+  .card3 img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 7. Contact Section & Form */
+  .container2#contact {
+    padding: 20px;
+  }
+
+  .all-name,
+  .email-phone {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .First-name,
+  .Last-name,
+  .email,
+  .phone {
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    box-sizing: border-box; /* Mencegah input keluar layar */
+  }
+
+  /* 8. Footer */
   .footer-container {
-    gap: 1.75rem;
-    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
   }
 
-  /* Membuat copyright dan link privasi menjadi tumpuk di tengah untuk layar HP */
+  .footer-col {
+    width: 100%;
+  }
+
   .footer-bottom-container {
     flex-direction: column;
     text-align: center;
-    gap: 0.5rem;
-  }
-
-  /* Mengatur posisi tombol back to top sedikit lebih kecil di HP */
-  #backToTop {
-    bottom: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
+    gap: 10px;
   }
 }
